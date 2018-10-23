@@ -55,10 +55,13 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+  def titleize_symbol(symbol)
+    holiday.to_s.split("_").map {|word| word.capitalize!}.join(" ")
+  end
+
   holiday_hash.each do |season|
     season.each do |holiday|
-      print holiday.to_s.split("_").map {|word| word.capitalize!}.join(" ")
-      print ": "
+      puts titleize_symbol(holiday) + ": "
     end
   end
 end
