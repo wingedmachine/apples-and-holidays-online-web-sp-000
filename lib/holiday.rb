@@ -61,7 +61,7 @@ def all_supplies_in_holidays(holiday_hash)
 
   holiday_hash.each do |season|
     season.each do |holiday|
-      if holiday.keys == nil
+      if holiday === Symbol
         puts titleize_symbol(holiday) + ":"
       end
     end
