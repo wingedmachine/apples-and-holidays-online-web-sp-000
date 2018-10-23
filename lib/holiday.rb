@@ -62,7 +62,9 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays|
     puts titleize_symbol(season) + ":"
     holidays.each do |holiday, supplies|
-      binding.pry
+      holiday_supplies = "\t" + titleize_symbol(holiday) + ": "
+      holiday_supplies += supplies.join(", ")
+      puts holiday_supplies
     end
   end
 end
