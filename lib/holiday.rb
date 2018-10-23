@@ -59,11 +59,10 @@ def all_supplies_in_holidays(holiday_hash)
     symbol.to_s.split("_").map {|word| word.capitalize!}.join(" ")
   end
 
-  holiday_hash.each do |season|
-    season.each do |holiday|
-      if Symbol === holiday
-        puts titleize_symbol(holiday) + ":"
-      end
+  holiday_hash.each do |season, holidays|
+    puts titleize_symbol(season) + ":"
+    holidays.each do |holiday, supplies|
+      
     end
   end
 end
